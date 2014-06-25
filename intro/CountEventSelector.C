@@ -27,22 +27,19 @@
 #include "TChain.h"
 #include "TFile.h"
 #include "TSelector.h"
-
-const Int_t kMaxfParticles = 1293;
+#include "TTreeReader.h"
+#include "TTreeReaderValue.h"
 
 class CountEventSelector : public TSelector {
 public :
 
-   Int_t        fTotalDataSize;    // Sum of data size (in bytes) of all events
+   Int_t fTotalDataSize;   // Sum of data size (in bytes) of all events
 
-   // Variables used to store the data
-   Int_t        fCurrentEventSize; // Size of the current event
-
-   // Tree branches
-   TBranch     *fEventSizeBranch;  // Pointer to the event.fEventsize branch
+   // Tree reader
+   TTreeReader fReader;
+   TTreeReaderValue<Int_t> fCurrentEventSize;
    
-   CountEventSelector(TTree * = 0): fTotalDataSize(0), fCurrentEventSize(0),
-                                    fEventSizeBranch(0) { }
+   CountEventSelector(TTree * = 0): fTotalDataSize(0), fCurrentEventSize(fReader, "fEventSize") { }
    virtual ~CountEventSelector() { }
 
    virtual void    Init(TTree *tree);
@@ -60,15 +57,8 @@ void CountEventSelector::Init(TTree *tree)
    // a new tree or chain. Typically here the branch addresses and branch
    // pointers of the tree will be set.
 
-   // To use SetBranchAddress() with simple types (e.g. double, int)
-   // instead of objects (e.g. std::vector&lt;Particle&gt;).
-   tree->SetMakeClass(1);
+   fReader.SetTree(tree);
 
-   // Connect the branch "fEventSize" with the variable 
-   // fCurrentEventSize that we want to contain the data.
-   // While we are at it, ask the tree to save the branch 
-   // in fEventSizeBranch
-   tree->SetBranchAddress("fEventSize", &fCurrentEventSize, &fEventSizeBranch);
 }
 
 void CountEventSelector::SlaveBegin(TTree *tree)
@@ -90,15 +80,13 @@ Bool_t CountEventSelector::Process(Long64_t entry)
    // This function should contain the "body" of the analysis: select relevant
    // tree entries, run algorithms on the tree entry and typically fill histograms.
    
-   // Load the data for TTree entry number "entry" from branch 
-   // fEventSize into the connected data member (fCurrentEventSize):
-   fEventSizeBranch->GetEntry(entry);
+   fReader.SetEntry(entry);
 
    // We can still print some informations about the current event
-   //printf("Size of Event %ld = %d Bytes\n", entry, fCurrentEventSize);
+   //printf("Size of Event %ld = %d Bytes\n", entry, **fCurrentEventSize);
 
    // compute the total size of all events
-   fTotalDataSize += fCurrentEventSize;
+   fTotalDataSize += *fCurrentEventSize;
    return kTRUE;
 }
 

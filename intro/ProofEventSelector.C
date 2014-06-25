@@ -56,16 +56,11 @@ Bool_t ProofEventSelector::Process(Long64_t entry)
    //
    // The return value is currently not used.
 
-   // *** 1. *** Tell the tree to load the data for this entry:
-   // We only need the number of particles...
-   fNParticlesBranch->GetEntry(entry);
-   // ... and their position in X...
-   fParticlesPosXBranch->GetEntry(entry);
-   // ... and their momentum
-   fParticlesMomentumBranch->GetEntry(entry);
+   // *** 1. *** Tell the reader to load the data for this entry:
+   fReader.SetEntry(entry);
 
    // *** 2. *** Do the actual analysis
-   for (int iParticle = 0; iParticle < fNParticles; ++iParticle) {
+   for (unsigned int iParticle = 0; iParticle < fParticlesPosX.GetSize(); ++iParticle) {
       if (fParticlesMomentum[iParticle] > 40.0)
          fPosX->Fill(fParticlesPosX[iParticle]);
    }

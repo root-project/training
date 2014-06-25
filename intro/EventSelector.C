@@ -27,8 +27,6 @@
 #include "TFile.h"
 #include "TSelector.h"
 
-const Int_t kMaxfParticles = 1293;
-
 class EventSelector : public TSelector {
 public :
 

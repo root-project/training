@@ -14,27 +14,25 @@
 #include "TSelector.h"
 #include "TProofServ.h"
 #include "TH1.h"
+#include "TTreeReader.h"
+#include "TTreeReaderArray.h"
 
 const Int_t kMaxfParticles = 1293;
 
 class ProofEventSelector : public TSelector {
 public :
-   TTree          *fChain;   //!pointer to the analyzed TTree or TChain
+   TTree *fChain; //!pointer to the analyzed TTree or TChain
 
    // Declaration of leaf types
-   TH1         *fPosX; // X position of the particles
+   TH1   *fPosX;  // X position of the particles
 
-   // Declaration of leaf types
-   Int_t        fNParticles;
-   Double_t     fParticlesPosX[kMaxfParticles];       //[fNParticles]
-   Double_t     fParticlesMomentum[kMaxfParticles];   //[fNParticles]
+   // Tree reader
+   TTreeReader fReader;
+   TTreeReaderArray<Double_t> fParticlesPosX;
+   TTreeReaderArray<Double_t> fParticlesMomentum;
 
-   // List of branches
-   TBranch     *fNParticlesBranch;
-   TBranch     *fParticlesPosXBranch;
-   TBranch     *fParticlesMomentumBranch;
-
-   ProofEventSelector(TTree * = 0): fPosX(0) { }
+   ProofEventSelector(TTree * = 0) : fChain(0), fPosX(0), fParticlesPosX(fReader, "fParticles.fPosX"),
+                                     fParticlesMomentum(fReader, "fParticles.fMomentum") { }
    virtual ~ProofEventSelector() { }
    virtual Int_t   Version() const { return 2; }
    virtual void    SlaveBegin(TTree *tree);
@@ -59,17 +57,11 @@ void ProofEventSelector::Init(TTree *tree)
    // SlaveBegin() is a good place to create histograms. 
    // For PROOF, this is called for each worker.
 
-   // Set branch addresses and branch pointers
    if (!tree) return;
    fChain = tree;
-   // To use SetBranchAddress() with simple types (e.g. double, int)
-   // instead of objects (e.g. std::vector<Particle>).
-   fChain->SetMakeClass(1);
 
-   // Connect the branches with their member variables.
-   tree->SetBranchAddress("fParticles", &fNParticles, &fNParticlesBranch);
-   tree->SetBranchAddress("fParticles.fPosX", fParticlesPosX, &fParticlesPosXBranch);
-   tree->SetBranchAddress("fParticles.fMomentum", fParticlesMomentum, &fParticlesMomentumBranch);
+   // Associate the reader and the tree 
+   fReader.SetTree(tree);
 }
 
 Bool_t ProofEventSelector::Notify()

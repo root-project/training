@@ -30,25 +30,21 @@
 #include "TProofServ.h"
 #include "TH1.h"
 #include "TStyle.h"
-
-const Int_t kMaxfParticles = 1293;
+#include "TTreeReader.h"
+#include "TTreeReaderArray.h"
 
 class EventDataSelector : public TSelector {
 public :
 
-   // Declaration of leaf types
-   Int_t        fNParticles;
-   Double_t     fParticlesPosX[kMaxfParticles];       //[fNParticles]
-   Double_t     fParticlesMomentum[kMaxfParticles];   //[fNParticles]
-
-   // List of branches
-   TBranch     *fNParticlesBranch;
-   TBranch     *fParticlesPosXBranch;
-   TBranch     *fParticlesMomentumBranch;
+   // Tree reader
+   TTreeReader fReader;
+   TTreeReaderArray<Double_t> fParticlesPosX;
+   TTreeReaderArray<Double_t> fParticlesMomentum;
 
    EventDataSelector(TTree * = 0) { }
 
-   virtual ~EventDataSelector() { }
+   virtual ~EventDataSelector() : fParticlesPosX(fReader, "fParticles.fPosX"),
+                                  fParticlesMomentum(fReader, "fParticles.fMomentum") { }
    virtual void    Init(TTree *tree);
    virtual void    SlaveBegin(TTree *tree);
    virtual Bool_t  Process(Long64_t entry);
@@ -68,14 +64,8 @@ void EventDataSelector::Init(TTree *tree)
    // Init() will be called many times when running on PROOF
    // (once per file to be processed).
 
-   // To use SetBranchAddress() with simple types (e.g. double, int)
-   // instead of objects (e.g. std::vector&lt;Particle&gt;).
-   tree->SetMakeClass(1);
-
-   // Connect the branches with their member variables.
-   tree->SetBranchAddress("fParticles", &fNParticles, &fNParticlesBranch);
-   tree->SetBranchAddress("fParticles.fPosX", fParticlesPosX, &fParticlesPosXBranch);
-   tree->SetBranchAddress("fParticles.fMomentum", fParticlesMomentum, &fParticlesMomentumBranch);
+   // Associate the reader and the tree 
+   fReader.SetTree(tree);
 }
 
 void EventDataSelector::SlaveBegin(TTree *tree)
@@ -97,15 +87,7 @@ Bool_t EventDataSelector::Process(Long64_t entry)
    // This function should contain the "body" of the analysis: select relevant
    // tree entries, run algorithms on the tree entry and typically fill histograms.
 
-   // *** 1. *** Tell the tree to load the data for this entry:
-   // We only need the number of particles...
-   fNParticlesBranch->GetEntry(entry);
-   // ... and their position in X...
-   fParticlesPosXBranch->GetEntry(entry);
-   // ... and their momentum
-   fParticlesMomentumBranch->GetEntry(entry);
-
-   // *** 2. *** Do the actual analysis
+   // *** Do the actual analysis
 
    return kTRUE;
 }
