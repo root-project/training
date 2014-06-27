@@ -36,10 +36,10 @@
 class EventDataSelector : public TSelector {
 public :
 
-   // Tree reader
-   TTreeReader fReader;
-   TTreeReaderArray<Double_t> fParticlesPosX;
-   TTreeReaderArray<Double_t> fParticlesMomentum;
+   // Variables used to access and store the data
+   TTreeReader fReader;                            // The tree reader
+   TTreeReaderArray<Double_t> fParticlesPosX;      // particles position in X
+   TTreeReaderArray<Double_t> fParticlesMomentum;  // particles momentum
 
    EventDataSelector(TTree * = 0) { }
 

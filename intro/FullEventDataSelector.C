@@ -38,10 +38,10 @@ public :
 
    TH1   *fPosX;  // X position of the particles
 
-   // Tree reader
-   TTreeReader fReader;
-   TTreeReaderArray<Double_t> fParticlesPosX;
-   TTreeReaderArray<Double_t> fParticlesMomentum;
+   // Variables used to access and store the data
+   TTreeReader fReader;                            // The tree reader
+   TTreeReaderArray<Double_t> fParticlesPosX;      // particles position in X
+   TTreeReaderArray<Double_t> fParticlesMomentum;  // particles momentum
 
    FullEventDataSelector(TTree * = 0): fPosX(0), fParticlesPosX(fReader, "fParticles.fPosX"),
                                        fParticlesMomentum(fReader, "fParticles.fMomentum") { }

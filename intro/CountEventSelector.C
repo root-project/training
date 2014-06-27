@@ -36,7 +36,7 @@ public :
    Int_t fTotalDataSize;   // Sum of data size (in bytes) of all events
 
    // Variables used to access and store the data
-   TTreeReader fReader;                       // The tree reader 
+   TTreeReader fReader;                       // The tree reader
    TTreeReaderValue<Int_t> fCurrentEventSize; // Size of the current event
 
    CountEventSelector(TTree * = 0): fTotalDataSize(0),
