@@ -35,11 +35,12 @@ public :
 
    Int_t fTotalDataSize;   // Sum of data size (in bytes) of all events
 
-   // Tree reader
-   TTreeReader fReader;
-   TTreeReaderValue<Int_t> fCurrentEventSize;
-   
-   CountEventSelector(TTree * = 0): fTotalDataSize(0), fCurrentEventSize(fReader, "fEventSize") { }
+   // Variables used to access and store the data
+   TTreeReader fReader;                       // The tree reader 
+   TTreeReaderValue<Int_t> fCurrentEventSize; // Size of the current event
+
+   CountEventSelector(TTree * = 0): fTotalDataSize(0),
+                      fCurrentEventSize(fReader, "fEventSize") { }
    virtual ~CountEventSelector() { }
 
    virtual void    Init(TTree *tree);
@@ -57,6 +58,7 @@ void CountEventSelector::Init(TTree *tree)
    // a new tree or chain. Typically here the branch addresses and branch
    // pointers of the tree will be set.
 
+   // Associate the TTree reader with the tree we want to read
    fReader.SetTree(tree);
 
 }
@@ -79,14 +81,17 @@ Bool_t CountEventSelector::Process(Long64_t entry)
    //
    // This function should contain the "body" of the analysis: select relevant
    // tree entries, run algorithms on the tree entry and typically fill histograms.
-   
+
+   // Tell the TTree reader to get the data for
+   // the entry number "entry":
    fReader.SetEntry(entry);
 
    // We can still print some informations about the current event
-   //printf("Size of Event %ld = %d Bytes\n", entry, **fCurrentEventSize);
+   //printf("Size of Event %ld = %d Bytes\n", entry, *fCurrentEventSize);
 
    // compute the total size of all events
    fTotalDataSize += *fCurrentEventSize;
+
    return kTRUE;
 }
 
