@@ -7,10 +7,9 @@ To build a new OVA image customized for the tutorials, is best to do it from a C
 ~~~
 #!/bin/sh
 . /etc/cernvm/site.conf
-
 echo "source /cvmfs/sft.cern.ch/lcg/root-training-setup.sh" > /etc/profile.d/tutorial-setup.sh
-
 exit
+
 [amiconfig]
 plugins=cernvm cernvm_appliance rapadminpassword
 
