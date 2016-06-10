@@ -37,9 +37,9 @@ cvmfs_branch=cernvm-prod.cern.ch
 
 [ucernvm-end]
 ~~~
-- Several remarks:
-   - Note the setup script located in CVMFS
-   - The desktop icon `README` has been generated using `cat Desktop/README.desktop | base64 -w0`
-- Generate the image with the command `cvm2ova -n ROOT-Tutorial -d 10000 -m 1024 -i cernvm-3.6.5.hdd -u userdata -o`
+- Several remarks concerning the `userdata` file
+   - Note the setup script located in CVMFS the reference made in `/etc/profile.d/tutorial-setup.sh` 
+   - The desktop icon `README` has been generated using `cat Desktop/README.desktop | base64 -w0` after a launcher has been created called README in the Desktop.
+- Generate the final image with the command `cvm2ova -n ROOT-Tutorial -d 10000 -m 1024 -i cernvm-3.6.5.hdd -u userdata -o`. This one is using version 3.6.5 of CernVM, 1 GB memory and 10 GB hard disk.
 - Copy the resulting image called *ROOT-Tutorial.ova* to the host or upload it to the GitHub site
 
