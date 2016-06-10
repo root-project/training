@@ -40,9 +40,6 @@ cvmfs_branch=cernvm-prod.cern.ch
 - Several remarks:
    - Note the setup script located in CVMFS
    - The desktop icon `README` has been generated using `cat Desktop/README.desktop | base64 -w0`
-- Generate the image with the command
-  ~~~
-  cvm2ova -n ROOT-Tutorial -d 10000 -m 1024 -i cernvm-3.6.5.hdd -u userdata -o
-  ~~~
-- Copy the resulting image called *ROOT-Tutorial* to the host or upload it to the GitHub site
+- Generate the image with the command `cvm2ova -n ROOT-Tutorial -d 10000 -m 1024 -i cernvm-3.6.5.hdd -u userdata -o`
+- Copy the resulting image called *ROOT-Tutorial.ova* to the host or upload it to the GitHub site
 
