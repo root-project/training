@@ -2,6 +2,7 @@
 
 Introductory ROOT courses spanning everything from starting up ROOT to
 reading from a TTree to fitting. Used for the CERN Summer Student tutorials.
+[![alt text](http://swanserver.web.cern.ch/swanserver/images/badge_swan_white_150.png)] (https://cern.ch/swanserver/cgi-bin/go?projurl=https://github.com/root-mirror/training.git)
 
 ## Setup a virtual machine
 - Install the latest *VirtualBox* on your machine: [hpps://www.virtualbox.org](hpps://www.virtualbox.org)
