@@ -93,8 +93,8 @@ Bool_t FullEventDataSelector::Process(Long64_t entry)
    // This function should contain the "body" of the analysis: select relevant
    // tree entries, run algorithms on the tree entry and typically fill histograms.
 
-   // *** 1. *** Tell the reader to load the data for this entry:
-   fReader.SetEntry(entry);
+   // *** 1. *** Tell the reader to load the data for this entry in the current tree:
+   fReader.SetLocalEntry(entry);
 
    // *** 2. *** Do the actual analysis
    for (unsigned int iParticle = 0; iParticle < fParticlesPosX.GetSize(); ++iParticle) {

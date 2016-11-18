@@ -56,8 +56,8 @@ Bool_t ProofEventSelector::Process(Long64_t entry)
    //
    // The return value is currently not used.
 
-   // *** 1. *** Tell the reader to load the data for this entry:
-   fReader.SetEntry(entry);
+   // *** 1. *** Tell the reader to load the data for this entry in the current tree:
+   fReader.SetLocalEntry(entry);
 
    // *** 2. *** Do the actual analysis
    for (unsigned int iParticle = 0; iParticle < fParticlesPosX.GetSize(); ++iParticle) {
