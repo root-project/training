@@ -22,9 +22,9 @@ void macro1(){
 
     // Instance of the graph
     TGraphErrors graph(n_points,x_vals,y_vals,nullptr,y_errs);
-    graph.SetTitle("Measurement XYZ;lenght [cm];Arb.Units");
+    graph.SetTitle("Measurement XYZ;length [cm];Arb.Units");
 
-    // Make the plot estetically better
+    // Make the plot esthetically better
     graph.SetMarkerStyle(kOpenCircle);
     graph.SetMarkerColor(kBlue);
     graph.SetLineColor(kBlue);
@@ -37,7 +37,7 @@ void macro1(){
 
     // Define a linear function
     TF1 f("Linear law","[0]+x*[1]",.5,10.5);
-    // Let's make the funcion line nicer
+    // Let's make the function line nicer
     f.SetLineColor(kRed); f.SetLineStyle(2);
     // Fit it to the graph and draw it
     graph.Fit(&f);
