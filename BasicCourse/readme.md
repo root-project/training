@@ -48,7 +48,7 @@ Python.
  - Random number generation
  - Exercises
 
-6. The ROOT-Books 2h
+6. ROOTBooks 2h
  - Complement the macro, prompt and script approach with a web-based solution
  - Create a nice ROOT-Book: best practices, plotting
  - Introduction to JSROOT
