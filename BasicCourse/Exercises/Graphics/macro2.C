@@ -1,4 +1,4 @@
-// Second example presented in "The ROOT graphics functionalities
+// Second example presented in "The ROOT graphics functionalities"
 
 void macro2(){
    TH2F *h = new TH2F("h","Option COL example ",300,-4,4,300,-20,20);

@@ -1,4 +1,4 @@
-// First example presented in "The ROOT graphics functionalities
+// First example presented in "The ROOT graphics functionalities"
 
 void macro1() {
    // The values and the errors on the Y axis
