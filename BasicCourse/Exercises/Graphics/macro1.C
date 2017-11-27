@@ -8,7 +8,7 @@ void macro1() {
    double y_errs[n_points] = {5,5,4.7,4.5,4.2,5.1,2.9,4.1,4.8,5.43};
 
    // Instance of the graph
-   auto *graph = new TGraphErrors(n_points,x_vals,y_vals,nullptr,y_errs);
+   auto graph = new TGraphErrors(n_points,x_vals,y_vals,nullptr,y_errs);
    graph->SetTitle("Measurement XYZ;length [cm];Arb.Units");
 
    // Make the plot esthetically better
@@ -23,7 +23,7 @@ void macro1() {
    graph->Draw("APE");
 
    // Define a linear function
-   auto *f = new TF1("Linear law","[0]+x*[1]",.5,10.5);
+   auto f = new TF1("Linear law","[0]+x*[1]",.5,10.5);
    // Let's make the function line nicer
    f->SetLineColor(kRed);
    f->SetLineStyle(2);
@@ -31,18 +31,18 @@ void macro1() {
    graph->Fit(f);
 
    // Build and Draw a legend
-   auto *legend = new TLegend(.1,.7,.3,.9,"Lab. Lesson 1");
+   auto legend = new TLegend(.1,.7,.3,.9,"Lab. Lesson 1");
    legend->AddEntry(graph,"Exp. Points","PE");
    legend->AddEntry(f,"Th. Law", "L");
    legend->Draw();
 
    // Draw an arrow on the canvas
-   auto *arrow = new TArrow(8,8,6.2,23,0.02,"|>");
+   auto arrow = new TArrow(8,8,6.2,23,0.02,"|>");
    arrow->SetLineWidth(2);
    arrow->Draw();
 
    // Add some text to the plot and highlight the 3rd label
-   auto *text = new TLatex(8.2,7.5,"#splitline{Maximum}{Deviation}");
+   auto text = new TLatex(8.2,7.5,"#splitline{Maximum}{Deviation}");
    text->Draw();
    graph->GetXaxis()->ChangeLabel(3,-1,-1,-1,kRed);
 }
