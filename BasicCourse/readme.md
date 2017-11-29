@@ -31,15 +31,7 @@ Python.
  - Basic fitting and parameter estimation
  - Exercises
 
-4. Python Interface 2h
- - Python crash course
- - Mapping C++ to Python with PyROOT: elements of the ROOT Python "bindings"
- - Creating a nice plot with PyROOT
- - Exercises
-
-### Day 2
-
-5. Fitting 1h
+4. Fitting 1h
  - Likelihood and Chi2 maximisation
  - Introduction to fitting and common fitting problems
  - Building sophisticated fit functions
@@ -48,11 +40,19 @@ Python.
  - Random number generation
  - Exercises
 
+### Day 2
+
+5. Python Interface 1h
+ - Python crash course
+ - Mapping C++ to Python with PyROOT: elements of the ROOT Python "bindings"
+ - Creating a nice plot with PyROOT
+ - Exercises
+
 6. ROOTBooks 2h
  - Complement the macro, prompt and script approach with a web-based solution
- - Create a nice ROOT-Book: best practices, plotting
+ - Create a nice ROOTBook: best practices, plotting
  - Introduction to JSROOT
- - ROOT-Books at CERN
+ - ROOTBooks at CERN
  - Exercises
 
 7. Working with Files 1h
