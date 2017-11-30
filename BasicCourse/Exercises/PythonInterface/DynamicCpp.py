@@ -3,7 +3,7 @@ import ROOT
 
 # Define a C++ function that counts the characters in a string
 cpp_function_code = """
-int CountCharacters(const std::string s)
+int CountCharacters(const std::string& s)
 {
    return s.size();
 }
