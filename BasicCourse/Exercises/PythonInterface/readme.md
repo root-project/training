@@ -77,4 +77,6 @@ In this exercise you will practise the interaction between Python and C++ thanks
 - Make that function known to the ROOT interpreter in a Python module.
 - Invoke the function via PyROOT.
 
+If you want to go the extra mile, write three solutions for the exercise: (i) provide a string with the C++ code to the interpreter, (ii) pass a header to the interpreter and (iii) load a library dynamically.
+
 You can find the solution ([here](DynamicCpp.py)).
