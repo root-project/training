@@ -27,6 +27,7 @@ SWAN (Service for Web-based ANalysis) is a CERN service that allows interactive 
 In order to be able to connect and use the SWAN service during the course, participants need to make sure that:
 * They have a CERN account that is associated to a computing group. They can check if they belong to a computing group at https://account.cern.ch/account/CERNAccount/AccountStatus.aspx. If a participant does not belong to any computing group, she can subscribe to the default computing group following these instructions: https://resources.web.cern.ch/resources/Help/?kbid=067030
 * They have created a CERNBox account. In order to create it, they just need to connect and authenticate with their CERN username and password at https://cernbox.cern.ch
+* They can log in to SWAN with their CERN username and password: https://swan.cern.ch
 
 ## Content
 
