@@ -6,11 +6,13 @@ Python.
 
 ## Preparation for the Course
 
-Participants in the ROOT basic course need to perform the following preparation actions **prior to the course**.
+Participants of the ROOT basic course need to perform the following preparation actions **prior to the course**.
 
 ### Install the ROOT Virtual Machine Image
 
-Install the ROOT Virtual Machine . Detailed steps:
+Participants have at their disposal a virtual machine image where ROOT is installed. With this image, they can instantiate a virtual machine and execute the ROOT examples and exercises that will be shown during the course.
+
+In order to install the ROOT Virtual Machine image in their own machine, participants can follow these steps:
 * Download and install VirtualBox:
 https://www.virtualbox.org/wiki/Downloads
 * Download the ROOT VM appliance from this link:
@@ -20,9 +22,11 @@ https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html
 
 ### Ensure you can log in to SWAN
 
-In order to be able to connect and use the SWAN service, participants need to make sure that:
-* They have a CERN account that is associated to a computing group. They can check if they belong to a computing group at the link https://account.cern.ch/account/CERNAccount/AccountStatus.aspx. If a participant does not belong to any computing group, she can subscribe to the default computing group following these instructions: https://resources.web.cern.ch/resources/Help/?kbid=067030
-* They have created a CERNBox account. In order to create it, they just need to connect and authenticate with their CERN username and password at: https://cernbox.cern.ch
+SWAN (Service for Web-based ANalysis) is a CERN service that allows interactive edition and execution of ROOT programs from a web browser.
+
+In order to be able to connect and use the SWAN service during the course, participants need to make sure that:
+* They have a CERN account that is associated to a computing group. They can check if they belong to a computing group at https://account.cern.ch/account/CERNAccount/AccountStatus.aspx. If a participant does not belong to any computing group, she can subscribe to the default computing group following these instructions: https://resources.web.cern.ch/resources/Help/?kbid=067030
+* They have created a CERNBox account. In order to create it, they just need to connect and authenticate with their CERN username and password at https://cernbox.cern.ch
 
 ## Content
 
