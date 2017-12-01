@@ -8,7 +8,7 @@ In order to put in practise what you have learned in the introductory Python cou
 - *find(text, word)*: given two string parameters, a text and a word, it returns true if the word is in the text (hint: convert the text into a list and iterate on it).
 
 Once the module is finished, either from the Python shell or from a script, invoke the defined functions:
-- Count the number of words in *Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.*.
+- Count the number of words in *Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat*.
 - Look for the word *magna*.
 
 You can find the solution ([here](PythonTutorial.py)).
@@ -16,27 +16,27 @@ You can find the solution ([here](PythonTutorial.py)).
 ## Functions
 
 In this exercise you will start practising the creation of ROOT objects with PyROOT. As an example, the following C++ code:
-```
+```c++
 TH1F h("myTitle", "myHist", 64, -4, 4)
 h.FillRandom("gaus")
 h.Draw()
 ```
 can be translated to Python like this:
-```
+```python
 import ROOT
 h = ROOT.TH1F("myTitle", "myHist", 64, -4, 4)
 h.FillRandom("gaus")
 h.Draw()
 ```
 or like this (individual import):
-```
+```python
 from ROOT import TH1F
 h = TH1F("myTitle", "myHist", 64, -4, 4)
 h.FillRandom("gaus")
 h.Draw()
 ```
 Now practise the creation of a ROOT function object (TF1) with PyROOT, in particular by translating the C++ code below to Python:
-```
+```c++
 TF1 f("g", "gaus", -8, 8)
 f.SetParameters(250, 0, 1)
 f.Draw("Same")
