@@ -21,12 +21,8 @@ https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html
 ### Ensure you can log in to SWAN
 
 In order to be able to connect and use the SWAN service, participants need to make sure that:
-* They have a CERN account that is associated to a computing group. They can check if they belong to a computing group at this link:
-https://account.cern.ch/account/CERNAccount/AccountStatus.aspx
-If a participant does not belong to any computing group, she can subscribe to the default computing group following these instructions:
-https://resources.web.cern.ch/resources/Help/?kbid=067030
-* They have created a CERNBox account. In order to create it, they just need to connect and authenticate with their CERN username and password at:
-https://cernbox.cern.ch
+* They have a CERN account that is associated to a computing group. They can check if they belong to a computing group at the link https://account.cern.ch/account/CERNAccount/AccountStatus.aspx. If a participant does not belong to any computing group, she can subscribe to the default computing group following these instructions: https://resources.web.cern.ch/resources/Help/?kbid=067030
+* They have created a CERNBox account. In order to create it, they just need to connect and authenticate with their CERN username and password at: https://cernbox.cern.ch
 
 ## Content
 
