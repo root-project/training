@@ -5,10 +5,10 @@ Welcome to the exercises of the **Working With Columnar Data** learning module!
 Consider the *ntuple* dataset that you can find in the *hsimple.root* file in the *tutorials directory*.
 Starting from it, draw a plot of the sum of the *px* and *py* column for every value of *pz* between -2 and 2.
 Exercise the ROOT knowledge you gained carrying out the exercise in the following ways:
- - Useing C++
- - Use Python
- - Use TBrowser if possible
- - Use *TTre::Draw*
+ - Using C++
+ - Using Python
+ - Using TBrowser if possible
+ - Using *TTre::Draw*
 
 ### TDataFrame
 Now, go back to the previous work you performed. Can you do the same with *TDataFrame*, both in Python and C++?
