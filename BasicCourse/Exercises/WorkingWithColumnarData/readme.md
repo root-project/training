@@ -10,9 +10,6 @@ Exercise the ROOT knowledge you gained carrying out the exercise in the followin
  - Using TBrowser if possible
  - Using *TTre::Draw*
 
-### TDataFrame
-Now, go back to the previous work you performed. Can you do the same with *TDataFrame*, both in Python and C++?
-
 ## A Random Dataset
 With a method of your choice, create a TTree with three columns filled with random numbers. The columns should be done as follows:
  - **Column 1**: Poisson numbers with mu = 4
