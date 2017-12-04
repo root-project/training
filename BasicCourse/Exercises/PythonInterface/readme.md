@@ -117,7 +117,7 @@ xup = 3
 - Try to fit the function with the histogram without setting any parameter. This will result in a good fit for the polynomial function but not for the Lorentzian.
 - Play with the values of parameters 4 and 5. What happens if you set 4 to 0.2 and 5 to 1, and fit again?
 - Draw the histogram with error bars.
-- Using the fitting results, construct TF1s for the background and Lorentzian functions and draw them in the same canvas.
+- Using the fitting results, construct `TF1` objects for the background and Lorentzian functions and draw them in the same canvas.
 - Create a legend with an entry for each function and the histogram.
 
 You can find the solution ([here](Fitting.py)).
