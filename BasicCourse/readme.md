@@ -16,7 +16,7 @@ In order to install the ROOT Virtual Machine image in their own machine, partici
 * Download and install VirtualBox:
 https://www.virtualbox.org/wiki/Downloads
 * Download the ROOT VM appliance from this link:
-**MISSING!!!!!**
+https://cernbox.cern.ch/index.php/s/ZF5pffhZuZjwgAI
 * Import the ROOT VM appliance from VirtualBox:
 https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html
 
