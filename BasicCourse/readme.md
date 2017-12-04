@@ -20,7 +20,7 @@ https://www.virtualbox.org/wiki/Downloads
 * Import the ROOT VM appliance from VirtualBox:
 https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html
 
-### Ensure you can log in to SWAN
+### Make sure you can log in to SWAN
 
 SWAN (Service for Web-based ANalysis) is a CERN service that allows interactive edition and execution of ROOT programs from a web browser.
 
