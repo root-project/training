@@ -11,7 +11,7 @@ Once the module is finished, either from the Python shell or from a script, invo
 - Count the number of words in *Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat*.
 - Look for the word *magna*.
 
-You can find the solution ([here](PythonTutorial.py)).
+You can find the solution [here](PythonTutorial.py).
 
 ## Functions
 
@@ -42,7 +42,7 @@ f.SetParameters(250, 0, 1)
 f.Draw("Same")
 ```
 
-You can find the solution ([here](FunctionGaus.py)).
+You can find the solution [here](FunctionGaus.py).
 
 ## Histograms
 
@@ -54,7 +54,7 @@ In order to complete this exercise about ROOT histograms in PyROOT, please follo
 - Change its line width with a thicker one.
 - Draw it.
 
-You can find the solution ([here](HistoPol1.py)).
+You can find the solution [here](HistoPol1.py).
 
 ## Graphs
 
@@ -66,7 +66,7 @@ In order to complete this exercise about ROOT histograms in PyROOT, please follo
 - Set a red full square marker.
 - Draw an orange line between points.
 
-You can find the solution ([here](Graph.py)).
+You can find the solution [here](Graph.py).
 
 ## Dynamic C++
 
@@ -77,7 +77,7 @@ In this exercise you will practise the interaction between Python and C++ thanks
 
 If you want to go the extra mile, write three solutions for the exercise: (i) provide a string with the C++ code to the interpreter, (ii) pass a header to the interpreter and (iii) load a library dynamically.
 
-You can find the solution ([here](DynamicCpp.py)).
+You can find the solution [here](DynamicCpp.py).
 
 ## Fitting
 
@@ -120,4 +120,4 @@ xup = 3
 - Using the fitting results, construct `TF1` objects for the background and Lorentzian functions and draw them in the same canvas.
 - Create a legend with an entry for each function and the histogram.
 
-You can find the solution ([here](Fitting.py)).
+You can find the solution [here](Fitting.py).
