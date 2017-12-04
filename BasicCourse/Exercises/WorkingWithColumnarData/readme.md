@@ -1,6 +1,26 @@
 # Working With Columnar Data
 Welcome to the exercises of the **Working With Columnar Data** learning module!
 
+## Analyse a Dataset
+Consider the *ntuple* dataset that you can find in the *hsimple.root* file in the *tutorials directory*.
+Starting from it, draw a plot of the sum of the *px* and *py* column for every value of *pz* between -2 and 2.
+Exercise the ROOT knowledge you gained carrying out the exercise in the following ways:
+ - Useing C++
+ - Use Python
+ - Use TBrowser if possible
+ - Use *TTre::Draw*
+
+### TDataFrame
+Now, go back to the previous work you performed. Can you do the same with *TDataFrame*, both in Python and C++?
+
+## A Random Dataset
+With a method of your choice, create a TTree with three columns filled with random numbers. The columns should be done as follows:
+ - **Column 1**: Poisson numbers with mu = 4
+ - **Column 2**: Gaussian numbers with mean = 3 and sigma = 1.5
+ - **Column 3**: Exponential numbers between 0 and 20
+Write the dataset in a TFile and then study it with TBrowser.
+Can you fit the distributions and recover the original values of the parameters?
+
 ## Work with the CSV Data Source
 In this exercise we will produce a plot of the invariant mass of muons pairs coming from real data of the CMS 
 experiment (DOI: [10.7483/OPENDATA.CMS.CB8H.MFFA](http://opendata.cern.ch/record/700)).
@@ -22,6 +42,3 @@ Optional
 2) Try to select only muon pairs in the central part of the detector (|eta| < 2 or 1). What happens to the spectrum? Do you have an idea why?
 
 The solution to this exercise can be found in the file *CMSDimuonMass.C*.
-
-
-
