@@ -33,13 +33,13 @@ In order to be able to connect and use the SWAN service during the course, parti
 
 ### Day 1
 
-1. Introduction 1h
+**1. Introduction**
  - What is ROOT?
  - Usage patterns and example applications
  - Structure and elements of ROOT
  - Setting up the exercise environment
 
-2. The C++ Interpreter 2h
+**2. The C++ Interpreter**
  - C++ Crash course
  - The ROOT prompt
  - ROOT as a calculator and notepad for your C++
@@ -47,19 +47,19 @@ In order to be able to connect and use the SWAN service during the course, parti
  - Macros
  - Exercises
 
-3. Histograms, Graphs and Functions 2h
+**3. Histograms, Graphs and Functions**
  - Histograms
  - Graphs
  - Functions
  - Basic interaction with the canvas, plotting, styling
  - Exercises
 
-4. Graphics 1h
+**4. Graphics**
  - Creating a nice plot: best practices, axes, legends, styles, colours, markers and fonts
  - Introduction to JSROOT
  - Exercises
 
-5. Fitting 1h
+**5. Fitting**
  - Likelihood and Chi2 maximisation
  - Introduction to fitting and common fitting problems
  - Building sophisticated fit functions
@@ -70,32 +70,31 @@ In order to be able to connect and use the SWAN service during the course, parti
 
 ### Day 2
 
-6. Python Interface 1h
+**6. Python Interface**
  - Python crash course
  - Mapping C++ to Python with PyROOT: elements of the ROOT Python "bindings"
- - Creating a nice plot with PyROOT
  - Exercises
 
-7. ROOTBooks 2h
+**7. ROOTBooks**
  - Complement the macro, prompt and script approach with a web-based solution
  - Create a nice ROOTBook: best practices, plotting
  - JSROOT in ROOTBooks
- - ROOTBooks at CERN
+ - ROOTBooks at CERN: SWAN service
  - Exercises
 
-8. Working with Files 1h
+**8. Working with Files**
  - The problem of input and output of data
  - Elements of file structure and format
  - Write and read objects
  - The TBrowser
  - Exercises
 
-9. Working with Columnar Data 2h
+**9. Working with Columnar Data**
  - Two storage options: row- and column-wise
  - TDataFrame: the handle on the ROOT (and not only) columnar data
  - Exercises
 
-10. Developing packages using ROOT 30m
+**10. Developing packages using ROOT**
  - Setting up the environment
  - Linking libraries, finding headers: the `root-config` script
  - Exercises
