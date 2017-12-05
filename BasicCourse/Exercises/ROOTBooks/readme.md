@@ -18,3 +18,6 @@ c.Draw() # only after this command the plot appears
 ```
 
 ## Revisited Fitting Exercise
+This notebook is only half way complete. What is requested from you is to translate the interactive graph creation example we saw together during the lectures to complete it. Oh, the notebook is in Python and not C++ - some translation will be required!
+- [Open the notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/graphDraw.ipynb)
+- Only when the frustration is unbearable, [Open the solution SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/graphDraw_Solution.ipynb)
