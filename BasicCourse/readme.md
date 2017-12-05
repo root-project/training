@@ -4,6 +4,9 @@ This course targets scientists and engineers with little or no experience of ROO
 The basics of the package are covered as well as high level concepts of C++ and
 Python.
 
+## Slides of the Course
+You can find the slides of the course [here](https://docs.google.com/presentation/d/189f0qsDEnMSk2R5KWLRPz2TdEV5kTfXH1VcuAra4cnU/edit?usp=sharing).
+
 ## Preparation for the Course
 
 Participants of the ROOT basic course need to perform the following preparation actions **prior to the course**.
