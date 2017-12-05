@@ -8,4 +8,4 @@ Create a macro which builds a graph with the following features:
 - The marker is a full square. Its coulour is red.
 - A line joins the points and is orange
 
-One of the possible solutions (this is software, there are many solutions!) is the macro *SimpleGraph.C*.
+One of the possible solutions (this is software, there are many solutions!) is the macro [SimpleGraph.C](SimpleGraph.C).
