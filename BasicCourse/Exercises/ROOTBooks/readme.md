@@ -21,3 +21,6 @@ This notebook is only half way complete. What is requested from you is to transl
 - Only when the frustration is unbearable, [Open the solution SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/graphDraw_Solution.ipynb)
 
 ## Revisited Fitting Exercise
+We will now revisit the fitting exercise we carried out in the exercises of the PyROOT learning module. The objective is to demonstrate how a notebook allows to display all the intermediate steps of an analysis. In order to open the exercise notebook in SWAN, just follow the first link.
+- [Open the notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/FittingExample.ipynb)
+- Only when the frustration is unbearable, [Open the solution SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/FittingExample_Solution.ipynb)
