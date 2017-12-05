@@ -9,3 +9,11 @@ The solution is available in the **firstFit_Solution.C** macro.
 
 ## Correlation of Parameters
 The **correlatedParameters.py** contains a simple program which fits an exponential to a histogram. It seems that there is a problem. While the fit parameters look ok, the correlation matrix shows something fishy. Can you say what is going wrong and why?
+
+## Likelihood and Chi-Sqare estimators
+Run the macro **fitPanel.C** with this command
+```
+root -l fitPanel.C
+```
+This leaves open a window with a histogram drawn. The entries are distributed according to a Gauss but the bins are narrow and the number of entries low. Right click on the histogram line (or with two fingers if you have a mac). Select *FitPanel* to open a fit panel. Now fit the histogram selecting the Chi-Square and Likelihood estimators.
+What changes to the parameter values? And to their uncertainties?
