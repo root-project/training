@@ -1,11 +1,19 @@
 # Histograms, Graphs and Functions Exercises
 
+## A macro to build a histogram
+Create a macro which builds and draws a histogram with the following features:
+- The number of bins is 64 and the x axis ranges from 0 to 16.
+- It is filled with random numbers distributed according to a linear function (*pol1*).
+- Its line width is thicker than the default one.
+
+You can find the solution [here](SimpleHistogram.C).
+
 ## A macro to build a graph
-Create a macro which builds a graph with the following features:
+Create a macro which builds and draws a graph with the following features:
 - The title of the plot is *My graph*
 - The x and y axis have labels *my_{X}* and *myY* respectively
 - The points are three and with these coordinates (1,0), (2,3), (3,4)
 - The marker is a full square. Its coulour is red.
 - A line joins the points and is orange
 
-One of the possible solutions (this is software, there are many solutions!) is the macro [SimpleGraph.C](SimpleGraph.C).
+You can find the solution [here](SimpleGraph.C).
