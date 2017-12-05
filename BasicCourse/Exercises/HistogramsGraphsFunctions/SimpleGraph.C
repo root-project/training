@@ -1,22 +1,22 @@
 void SimpleGraph()
 {
-   TGraph g;
+   // Create the graph on the heap (with 'new') so that it survives the end of the macro
+   auto g = new TGraph();
 
    // Set the points
    std::initializer_list<std::pair<float, float>> points = {{1,0}, {2,3}, {3,4}};
    int i = 0;
    for(auto &&point : points) {
-      g.SetPoint(i++, point.first, point.second);
+      g->SetPoint(i++, point.first, point.second);
    }
 
    // Set the style
-   g.SetTitle("My graph;my_{X};myY");
-   g.SetLineColor(kOrange);
-   g.SetLineWidth(2);
-   g.SetMarkerStyle(kFullSquare);
-   g.SetMarkerColor(kRed);
+   g->SetTitle("My graph;my_{X};myY");
+   g->SetLineColor(kOrange);
+   g->SetLineWidth(2);
+   g->SetMarkerStyle(kFullSquare);
+   g->SetMarkerColor(kRed);
    
-   // Draw. To avoid the graphics primitive to be deleted
-   // at the end of the scope, we draw a clone of it.
-   g.DrawClone("APL");
+   // Draw!
+   g->Draw("APL");
 }
