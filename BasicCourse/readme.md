@@ -13,7 +13,7 @@ Participants of the ROOT basic course need to perform the following preparation 
 Participants have at their disposal a virtual machine image where ROOT is installed. With this image, they can instantiate a virtual machine and execute the ROOT examples and exercises that will be shown during the course.
 
 In order to install the ROOT Virtual Machine image in their own machine, participants can follow these steps:
-* Download and install VirtualBox:
+* Download and install VirtualBox (Note: on some recent macs 5.2 versions of VirtualBox are rather slow. If this is the case for you, you can try 5.0.40 instead):
 https://www.virtualbox.org/wiki/Downloads
 * Download the ROOT VM appliance from this link:
 https://cernbox.cern.ch/index.php/s/ZF5pffhZuZjwgAI
