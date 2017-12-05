@@ -8,3 +8,4 @@ Try to complete the code putting to a good use what you learned during the lectu
 The solution is available in the **firstFit_Solution.C** macro.
 
 ## Correlation of Parameters
+The **correlatedParameters.py** contains a simple program which fits an exponential to a histogram. It seems that there is a problem. While the fit parameters look ok, the correlation matrix shows something fishy. Can you say what is going wrong and why?
