@@ -1,5 +1,7 @@
 # Histograms, Graphs and Functions Exercises
 
+Welcome to the exercises of the **Histograms, Graphs and Function** learning module!
+
 ## A macro to build a histogram
 Create a macro which builds and draws a histogram with the following features:
 - The number of bins is 64 and the x axis ranges from 0 to 16.
