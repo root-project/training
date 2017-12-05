@@ -47,16 +47,19 @@ In order to be able to connect and use the SWAN service during the course, parti
  - Macros
  - Exercises
 
-3. Histograms and Functions 2h
+3. Histograms, Graphs and Functions 2h
  - Histograms
+ - Graphs
  - Functions
- - Graphs and time series
- - Creating a nice plot: best practices, axes, legends, styles, colours, markers and fonts
- - Basic interaction with the canvas
- - Basic fitting and parameter estimation
+ - Basic interaction with the canvas, plotting, styling
  - Exercises
 
-4. Fitting 1h
+4. Graphics 1h
+ - Creating a nice plot: best practices, axes, legends, styles, colours, markers and fonts
+ - Introduction to JSROOT
+ - Exercises
+
+5. Fitting 1h
  - Likelihood and Chi2 maximisation
  - Introduction to fitting and common fitting problems
  - Building sophisticated fit functions
@@ -67,32 +70,32 @@ In order to be able to connect and use the SWAN service during the course, parti
 
 ### Day 2
 
-5. Python Interface 1h
+6. Python Interface 1h
  - Python crash course
  - Mapping C++ to Python with PyROOT: elements of the ROOT Python "bindings"
  - Creating a nice plot with PyROOT
  - Exercises
 
-6. ROOTBooks 2h
+7. ROOTBooks 2h
  - Complement the macro, prompt and script approach with a web-based solution
  - Create a nice ROOTBook: best practices, plotting
- - Introduction to JSROOT
+ - JSROOT in ROOTBooks
  - ROOTBooks at CERN
  - Exercises
 
-7. Working with Files 1h
+8. Working with Files 1h
  - The problem of input and output of data
  - Elements of file structure and format
  - Write and read objects
  - The TBrowser
  - Exercises
 
-8. Working with Columnar Data 2h
+9. Working with Columnar Data 2h
  - Two storage options: row- and column-wise
  - TDataFrame: the handle on the ROOT (and not only) columnar data
  - Exercises
 
-9. Developing packages using ROOT 30m
+10. Developing packages using ROOT 30m
  - Setting up the environment
  - Linking libraries, finding headers: the `root-config` script
  - Exercises
