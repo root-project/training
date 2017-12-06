@@ -16,7 +16,7 @@ Run the macro with ROOT in three ways:
 - Loading it from the prompt and then invoking the *myMacro* function
 
 The final step consists in compiling the macro as executable with the compiler.
-Add to the compiler invocation the following arguments: *`root-config --cflags --libs`*:
+Add to the compiler invocation the following arguments: *`` `root-config --cflags --libs` ``*:
 this is needed to expose to the compiler the details about ROOT which are needed
 to link its libraries to the executable.
 ### Follow up question
