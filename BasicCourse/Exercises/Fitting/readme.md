@@ -10,7 +10,7 @@ The solution is available in the [firstFit_Solution.C](firstFit_Solution.C) macr
 ## Correlation of Parameters
 The **correlatedParameters.C** is a simple macro which fits an exponential to a histogram. It seems that there is a problem. While the fit parameters look ok, the correlation matrix shows something fishy. Can you say what is going wrong and why?
 
-## Likelihood and Chi-Sqare estimators
+## Likelihood and Chi-Square estimators
 Run the macro **fitPanel.C** with this command
 ```
 root -l fitPanel.C
