@@ -7,6 +7,13 @@ A repository in Github will be cloned to your CERNBox and a SWAN session will be
 
 [![Open_in SWAN](https://img.shields.io/badge/Open_in-SWAN-orange.svg)](https://cern.ch/swanserver/cgi-bin/go/?projurl=https://github.com/cernphsft/rootbinder.git)
 
+## Create a histogram
+Create a histogram, fill it with gaussian random numbers, set its colour to blue, draw it: all in a Python notebook
+ - Can you use the native Python random number generator for this?
+ - Can you make your plot interactive using JSROOT?
+ - Can you document what you did in markdown?
+Repeat the exercise in a C++ notebook
+
 ## Create a graph
 Recreate in a Python notebook the graph we built together during the lectures at the ROOT prompt.
 Display it using JavaScript graphics (use the ```%jsroot on``` magic).
