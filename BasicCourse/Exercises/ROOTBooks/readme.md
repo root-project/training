@@ -12,6 +12,7 @@ Create a histogram, fill it with gaussian random numbers, set its colour to blue
  - Can you use the native Python random number generator for this?
  - Can you make your plot interactive using JSROOT?
  - Can you document what you did in markdown?
+ 
 Repeat the exercise in a C++ notebook
 
 ## Create a graph
