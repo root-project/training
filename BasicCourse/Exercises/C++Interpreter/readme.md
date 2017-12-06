@@ -15,7 +15,7 @@ Carry out these simple tasks:
  - Quit
 
 ## Geometric series
-Can you create a macro to execute the geometric series exercise we saw together during the lectureds?
+Can you create a macro to execute the geometric series exercise we saw together during the lectures?
 The solution can be found in the *geometricSeries.C* macro.
 
 ## Complete a simple ROOT macro
