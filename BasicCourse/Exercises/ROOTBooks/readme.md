@@ -14,6 +14,10 @@ Create a histogram, fill it with gaussian random numbers, set its colour to blue
  - Can you document what you did in markdown?
  
 Repeat the exercise in a C++ notebook
+- [Open the exercise notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/CreateAHistogram.ipynb)
+- [Open the solution notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/CreateAHistogram_Solution.ipynb)
+- [Open the C++ solution notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/CreateAHistogramCpp_Solution.ipynb)
+
 
 ## Create a graph
 Recreate in a Python notebook the graph we built together during the lectures at the ROOT prompt.
