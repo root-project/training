@@ -101,7 +101,7 @@ double fitFunction(double *x, double *par) {
   return background(x, par) + lorentzianPeak(x, &par[3]);
 }
 ```
-- Construct and fill a histogram (`TH1F` class) given the following number of bins, bin content data and x range:
+- Construct and fill a histogram (`TH1F` class) given the following number of bins, bin content data and x range (hint: use `TH1F::SetBinContent`):
 ```python
 nbins = 60
 data = [ 6,1,10,12,6,13,23,22,15,21,
