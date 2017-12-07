@@ -2,7 +2,7 @@
 from ROOT import TH1F, TF1
 
 # Create, fill and draw histogram
-h = TH1F("myTitle", "myHist", 64, -4, 4)
+h = TH1F("myHist", "myTitle", 64, -4, 4)
 h.FillRandom("gaus")
 h.Draw()
 
