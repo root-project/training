@@ -15,6 +15,7 @@ With a method of your choice, create a TTree with three columns filled with rand
  - **Column 1**: Poisson numbers with mu = 4
  - **Column 2**: Gaussian numbers with mean = 3 and sigma = 1.5
  - **Column 3**: Exponential numbers between 0 and 20
+
 Write the dataset in a TFile and then study it with TBrowser.
 Can you fit the distributions and recover the original values of the parameters?
 
