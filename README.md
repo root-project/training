@@ -4,7 +4,7 @@ This repository collects the courses about ROOT.
 
 ## Index of the Material
 
-### [Summer Students' Course](https://github.com/root-project/training/tree/master/SummerStudentsCourse)
+### [Summer Student Course](https://github.com/root-project/training/tree/master/SummerStudentCourse)
 The ROOT course given to CERN Summer Students every Summer.
 
 ### [ROOT Basic Course](https://github.com/root-project/training/tree/master/BasicCourse)
