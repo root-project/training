@@ -10,7 +10,7 @@ You can find the slides of the course [here](https://docs.google.com/presentatio
 
 ## Preparation for the Course
 
-Participants of the ROOT basic course need to perform the following preparation actions **prior to the course**.
+Participants of the ROOT Summer Student course need to perform the following preparation actions **prior to the course**.
 
 ### Install ROOT
 
