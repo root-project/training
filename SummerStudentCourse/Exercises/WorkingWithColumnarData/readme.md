@@ -2,7 +2,7 @@
 Welcome to the exercises of the **Working With Columnar Data** learning module!
 
 ## Analyse a Dataset
-Consider the *ntuple* dataset that you can find in the *hsimple.root* file in the *tutorials directory*.
+Consider the *ntuple* dataset that you can find in the *hsimple.root* file [here](./hsimple.root).
 Starting from it, draw a plot of the sum of the *px* and *py* column for every value of *pz* between -2 and 2.
 Exercise the ROOT knowledge you gained carrying out the exercise using `RDataFrame`: in C++ or Python (or both, if you have time).
 
