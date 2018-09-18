@@ -1,4 +1,4 @@
-# ROOT Summer Student Course
+# ROOT INSIGHTS Course
 This course targets young scientists and engineers with little or no experience of ROOT.
 The basics of the package are covered as well as high level concepts of C++ and
 Python.
