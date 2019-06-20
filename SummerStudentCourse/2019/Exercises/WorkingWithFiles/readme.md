@@ -9,7 +9,7 @@ The instructions are embedded in the notebooks and your code soon will as well!
 
 ## TBrowser
 Open the file with *root*
-```root myFile.root```
+```root histos.root```
 And open a **TBrowser**
 ```root[0] TBrowser b```
-Now display the histograms and fit them with the **FitPanel**: can you recover the distributions according to which you created the histograms?
+Now display the histograms: do they have the same content you saw in the notebook?
