@@ -24,7 +24,7 @@ wget https://root.cern.ch/files/tutorials/tdf014_CsvDataSource_MuRun2010B.csv
 ```
 2) Create a data frame around this CSV file:
 ```
-auto tdf = ROOT::Experimental::TDF::MakeCsvDataFrame(fileName);
+auto rdf = ROOT::RDF::MakeCsvDataFrame(fileName);
 ```
 3) Apply a cut to the muon pairs, selecting the ones with opposite charge. Charges are stored in the Q1 and Q2 columns.
 4) Create a histogram of the invariant mass of the dimuon system. Choose a generous interval, say from 1 to 120 GeV. The formula for the invariant mass can be found [here](https://en.wikipedia.org/wiki/Invariant_mass).
