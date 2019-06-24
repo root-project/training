@@ -11,7 +11,7 @@ void SimpleGraph()
    }
 
    // Set the style
-   g->SetTitle("My graph;my_{X};myY");
+   g->SetTitle("My graph;my_{X};my_{Y}");
    g->SetLineColor(kOrange);
    g->SetLineWidth(2);
    g->SetMarkerStyle(kFullSquare);
