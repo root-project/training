@@ -16,7 +16,7 @@ Participants of the ROOT Summer Student course need to perform the following pre
 
 Please note that all participants must bring their own laptop to the workshop and, if possible, install ROOT beforehand: no time will be dedicated to the installation of ROOT.
 
-[ROOT version 6.14](https://root.cern.ch/content/release-61400) will be used during the tutorial: other versions will not be adequate. The Windows release is in alpha mode and will not be adequate.
+[ROOT version 6.16](https://root.cern.ch/content/release-61600) will be used during the tutorial: other versions will not be adequate. The Windows release is in alpha mode and will not be adequate.
 
 #### If installing ROOT is not possible
 If you don't manage to install ROOT on your machine, you will be using the version available on the `lxplus7` cluster. In this case, please make sure you can establish a graphics ssh connection to `lxplus7.cern.ch` using your CERN account (`ssh -XY youruser@lxplus7.cern.ch`).
