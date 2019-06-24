@@ -7,8 +7,12 @@
   // Create First an empty histogram with 50 bins with range [-10,10]
   TH1D h1("h1", "h1", 50, -10, 10);
 
-  // Fill the histogram with 10000 Gaussian Random number with mean=1 and
+  // Fill the histogram with 10000 Gaussian Random numbers with mean=1 and
   // sigma=2
+  // Hint: Find the TRandom3 documentation.
+  // Hint 2: If you don't find what you are looking for, check also the TRandom functions on TRandom3's
+  // documentation
+  TRandom3 randomGenerator(1);
   Your code here
 
   // Let's now draw the histogram
@@ -34,11 +38,9 @@
   auto res = h1.Fit(f1, "L S E");
 
   // print the result
-
   Your code here
 
   // We now get the correlation matrix of the fit from the TFitResult object and print it
-
   Your code here
 
 

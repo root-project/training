@@ -9,8 +9,12 @@
 
   // Fill the histogram with 10000 Gaussian Random number with mean=1 and
   // sigma=2
+  // Hint: Find the TRandom3 documentation.
+  // Hint 2: If you don't find what you are looking for, check also the TRandom functions on TRandom3's
+  // documentation
+  TRandom3 randomGenerator(1);
   for (int i = 0; i < 1000; ++i) {
-    h1.Fill(gRandom->Gaus(1, 2));
+    h1.Fill(randomGenerator.Gaus(1, 2));
   }
 
   // Let's now draw the histogram
