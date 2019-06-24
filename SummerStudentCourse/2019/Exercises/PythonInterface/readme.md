@@ -6,9 +6,9 @@ Welcome to the exercises of the **Python Interface** learning module!
 In order to complete this exercise about ROOT histograms in PyROOT, please follow these steps:
 - Open the Python interpreter.
 - Import the ROOT module.
-- Create a histogram with 64 bins and a axis ranging from 0 to 16.
+- Create a histogram with 64 bins and an x-axis ranging from 0 to 16.
 - Fill it with random numbers distributed according to a linear function (*pol1*).
-- Change its line width with a thicker one.
+- Make the line width a bit larger.
 - Draw it.
 
 You can find the solution [here](HistoPol1.py).
