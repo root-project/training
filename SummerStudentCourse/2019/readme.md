@@ -6,7 +6,7 @@ Python.
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## Slides of the Course
-You can find the slides of the course [here](https://docs.google.com/presentation/d/1gTjM5Jw7maUUEyVONRqza7KpuRVYwHB0jDFG9elgzWY/edit?usp=sharing).
+You can find the slides of the course [here](https://docs.google.com/presentation/d/1nNFRdh483KSYnoaA6q7x0nVeDPbhY7gjWyaGmr0ZdTA/edit?usp=sharing).
 
 ## Preparation for the Course
 
