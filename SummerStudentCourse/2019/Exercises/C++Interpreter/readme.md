@@ -12,7 +12,7 @@ Carry out these simple tasks:
 ## Complete a simple ROOT macro
 Consider the file *myMacro.C*. It is a simple ROOT macro. In this exercise, you
 will fill in the code you interactively typed into the interpreter to verify the
-value of the *TMath::Gaus* function.
+value of the geometric series.
 Run the macro with ROOT in three ways:
 - Directly invoking ROOT as interpreter for it
 - Executing it from within the prompt
