@@ -5,7 +5,7 @@ This is a collection of example notebooks to complement the 3 hours course for t
 Click on the link below.
 A repository in Github will be cloned to your CERNBox and a SWAN session will be opened for you:
 
-[![Open_in SWAN](https://img.shields.io/badge/Open_in-SWAN-orange.svg)](https://cern.ch/swanserver/cgi-bin/go/?projurl=https://github.com/cernphsft/rootbinder.git)
+[![Open_in SWAN](https://img.shields.io/badge/Open_in-SWAN-orange.svg)](https://cern.ch/swanserver/cgi-bin/go/?projurl=https://github.com/root-project/training/tree/master/NCPSchool2021/Examples)
 
 # ROOTbooks
 Welcome to the exercises of the **ROOTBooks** learning module!
@@ -27,5 +27,4 @@ Example of creating a histogram, fill it with gaussian random numbers, set its c
 
 Example to create graph as shown in the slide lectures.
 
-- [Open the notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/BasicCourse/Exercises/ROOTBooks/graphDraw.ipynb)
-- Only when the frustration is unbearable, [open the solution SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/NCPSchool2021/Examples/GraphDraw.ipynb)
+- [Open the notebook in SWAN](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/NCPSchool2021/Examples/GraphDraw.ipynb)
