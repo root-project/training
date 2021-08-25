@@ -8,7 +8,8 @@ You can find the slides of the course [here](https://docs.google.com/presentatio
 
 ## Specific submodules
 
-* ROOT RDataFrame: [basics](../SoftwareCarpentry/06-rdataframe-basics.ipynb), [features](../SoftwareCarpentry/07-rdataframe-features.ipynb).
+* [Examples](Examples): Notebooks showing core ROOT functionalities in C++ and Python.
+* [RDataFrame](RDataFrame): Notebooks demonstrating ROOT RDataFrame, a high-level interface for HEP data analysis.
 
 # ROOT installation
 
