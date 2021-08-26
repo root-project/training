@@ -8,6 +8,7 @@ You can find the slides of the course [here](https://docs.google.com/presentatio
 
 ## Specific submodules
 
+* [Introduction](introduction.ipynb): An introduction to using ROOT in a Python Jupyter Notebook.
 * [Examples](Examples): Notebooks showing core ROOT functionalities in C++ and Python.
 * [RDataFrame](RDataFrame): Notebooks demonstrating ROOT RDataFrame, a high-level interface for HEP data analysis.
 
