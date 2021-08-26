@@ -1,6 +1,6 @@
 # ROOT presentation for the 10th NCP LHC School
 
-[![Open_in SWAN](https://img.shields.io/badge/Open_in-SWAN-orange.svg)](https://cern.ch/swanserver/cgi-bin/go/?projurl=https://github.com/root/training.git)
+[![Open_in SWAN](https://img.shields.io/badge/Open_in-SWAN-orange.svg)](https://cern.ch/swanserver/cgi-bin/go?projurl=https://github.com/root/training.git)
 
 This course targets young scientists and engineers with little or no experience of ROOT. The basics of the package are covered as well as high level concepts of C++ and Python.
 
