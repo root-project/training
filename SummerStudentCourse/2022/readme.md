@@ -6,7 +6,7 @@ Python.
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## Slides of the Course
-You can find the slides of the course [here](https://docs.google.com/presentation/d/1nNFRdh483KSYnoaA6q7x0nVeDPbhY7gjWyaGmr0ZdTA/edit?usp=sharing).
+You can find the slides of the course [here](https://docs.google.com/presentation/d/1QkxfOik6XnA24glZrcHFaQjLOv99NGy1XQzzNht3lvM/edit?usp=sharing).
 
 ## Preparation for the Course
 
@@ -16,10 +16,11 @@ Participants of the ROOT Summer Student course need to perform the following pre
 
 Please note that all participants must bring their own laptop to the workshop and, if possible, install ROOT beforehand: no time will be dedicated to the installation of ROOT.
 
-[ROOT version 6.16](https://root.cern.ch/content/release-61600) will be used during the tutorial: other versions will not be adequate. The Windows release is in alpha mode and will not be adequate.
+[ROOT version 6.24](https://root.cern.ch/content/release-62400) or newer will be used during the exercises. Participants might still be able to run the exercises with older ROOT versions, but upgrading is recommended. The Windows release is in beta mode and therefore is not adequate to follow this course.
 
 #### If installing ROOT is not possible
-If you don't manage to install ROOT on your machine, you will be using the version available on the `lxplus7` cluster. In this case, please make sure you can establish a graphics ssh connection to `lxplus7.cern.ch` using your CERN account (`ssh -XY youruser@lxplus7.cern.ch`).
+
+If you don't manage to install ROOT on your machine, you can use the version available on the `lxplus` cluster. In this case, please make sure you can establish a graphics ssh connection to `lxplus.cern.ch` using your CERN account (`ssh -XY youruser@lxplus.cern.ch`).
 
 ### Make sure you can log in to SWAN
 
