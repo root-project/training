@@ -16,7 +16,7 @@ Participants of the ROOT Summer Student course need to perform the following pre
 
 Please note that all participants must bring their own laptop to the workshop and, if possible, install ROOT beforehand: no time will be dedicated to the installation of ROOT.
 
-[ROOT version 6.24](https://root.cern.ch/content/release-62400) or newer will be used during the exercises. Participants might still be able to run the exercises with older ROOT versions, but upgrading is recommended. The Windows release is in beta mode and therefore is not adequate to follow this course.
+[ROOT version 6.24/06](https://root.cern.ch/content/release-62406) or newer will be used during the exercises. Participants might still be able to run the exercises with older ROOT versions, but upgrading is recommended. The Windows release is in beta mode and therefore is not adequate to follow this course.
 
 #### If installing ROOT is not possible
 
