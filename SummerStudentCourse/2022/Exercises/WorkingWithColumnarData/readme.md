@@ -10,14 +10,18 @@ Use `RDataFrame` to complete the tasks, either in C++ or Python (or both, if you
 In this exercise, we will produce a plot of the invariant mass of muon pairs coming from real data of the CMS
 experiment (DOI: [10.7483/OPENDATA.CMS.CB8H.MFFA](http://opendata.cern.ch/record/700)).
 1) First of all, download the input file:
-```
-wget https://root.cern.ch/files/tutorials/tdf014_CsvDataSource_MuRun2010B.csv
-```
+   ```
+   wget https://root.cern.ch/files/tutorials/tdf014_CsvDataSource_MuRun2010B.csv
+   ```
+   or, on Windows:
+   ```
+   curl -O https://root.cern.ch/files/tutorials/tdf014_CsvDataSource_MuRun2010B.csv
+   ```
 
 2) Create a data frame that reads this CSV file:
-```
-auto rdf = ROOT::RDF::MakeCsvDataFrame(fileName);
-```
+   ```
+   auto rdf = ROOT::RDF::MakeCsvDataFrame(fileName);
+   ```
 
 3) The kinematic properties of the muons are stored in columns.
 For the "first" muon they are called
