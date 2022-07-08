@@ -3,7 +3,7 @@
 {
 // We fill a histogram with exponentially distributed random numbers
 TRandom3 rndm(1);
-TH1F h("he","Exponential Distribution", 64, 0, 16);
+TH1D h("he","Exponential Distribution", 64, 0, 16);
 for (auto i : ROOT::TSeqI(256)) { //TSeqI generates in integer sequence
   h.Fill(rndm.Exp(1));
 }

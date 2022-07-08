@@ -1,7 +1,7 @@
 void SimpleHistogram()
 {
    // Create a histogram with 50 bins and an x axis ranging from 0 to 10
-   auto h = new TH1D("myHisto", "Exponential distribution; Observed events;time", 100, 0, 10);
+   auto h = new TH1D("myHisto", "Exponential distribution; Observed events;time", 50, 0, 10);
 
    // Fill it with random numbers distributed according to an Exponential distribution
    // Use the global ROOT TRandom instance for generating random numbers 

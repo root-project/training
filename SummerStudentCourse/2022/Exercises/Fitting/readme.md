@@ -17,3 +17,12 @@ root -l fitPanel.C
 ```
 This leaves open a window with a histogram drawn. The entries are distributed according to a Gauss but the bins are narrow and the number of entries low. Right click on the histogram line (or with two fingers if you have a mac). Select *FitPanel* to open a fit panel. Now fit the histogram selecting the Chi-Square and Likelihood estimators.
 What changes to the parameter values? And to their uncertainties?
+
+## Example of fitting an histogram with a Gaussian function
+
+This notebook shows how to fit an histogram using ROOT with a simple function such as a Gaussian. We show the default chi-square method and the binned likelihood. We show also how to plot the fit residual using the TRatioPlot and to compute the chi2 for a goodness of fit test. The notebook is avaliable [here](GausFit.ipynb) ([Open in Swan](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/SummerStudentCourse/2022/Exercises/Fitting/GausFit.ipynb))
+
+## Example of fitting in Python
+
+This notebook shows how to fit an histogram in Python (using PYROOT) and using a user defined function.
+The notebook is avaliable [here](FittingExample.ipynb) ([Open in Swan](https://cern.ch/swanserver/cgi-bin/go?projurl=https://raw.githubusercontent.com/root-project/training/master/SummerStudentCourse/2022/Exercises/Fitting/FittingExample.ipynb))
