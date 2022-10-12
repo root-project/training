@@ -2,12 +2,15 @@
 
 # Introduciton
 
-Welcome to the first tutorial on RooFit, the part of ROOT that you can use for advanced statistical model building!
-It is used by many high-energy physics experiments, most notably by the LHC collaborations.
+Welcome to the first tutorial on RooFit, the part of ROOT that you can use for advanced statistical model building and fitting!
+
+My name is Jonas Rembser, and I am the current maintainer and lead developer of RooFit.
+
+RooFit is used by many high-energy physics experiments, most notably by the LHC collaborations.
 
 With RooFit, you can build arbitrarily complicated binned and unbinned likelihood models, fit them to your data, and prepare nice visualizations of your results. You can also use it for example to generate toy datasets, and to run profile likelihood scans.
 
-In this tutorial, I will explain you the fundamentals of unbinned likelihood fits with examples written in PyROOT, also making use of the newest Python-exclusive interfaces that RooFit provides.
+In this tutorial, I will explain to you the fundamentals of unbinned likelihood fits with examples written in PyROOT, also making use of the newest Python-exclusive interfaces that RooFit provides.
 
 So I hope this tutorial is a good fit for you, and with that being said, let's get started!
 
