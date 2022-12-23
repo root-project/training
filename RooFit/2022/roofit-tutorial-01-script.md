@@ -95,21 +95,20 @@ Indeed, the best-fit-value for tau is compatible with -0.18, which was the value
 ### Slide 11
 Next, I want to show you how you can nicely visualize your composite model and compare it to data.
 Let's create the usual RooPlot for the observable x, but this time we add the PDF three times:
-in one line we add the full PDFs, and in the other calls to `plotOn` we isolate the signal and background components with the `Components` keyword argument.
-Next, we add a leged, as required for any good plot.
-Here, the only aspect specific to RooFit is how to get a handle on the plotted object for the call to `TLegend::AddEntry`.
-This is done with the `RooPlot::findObject` method.
+in one line we add the full PDF, and in the other calls to `plotOn` we isolate the signal and background components with the `Components` keyword argument.
+Next, we add a legend, as required for any good plot.
+In the `AddEntry` calls, we have to use the same names that we have passed to the keyword arguments we passed to `plotOn`.
 
 But we don't want to leave it at that!
 Here, we create another RooPlot, where we add the residuals from the first RooPlot.
-The residual is the difference between the data and the model, which we want to see to understand if the fit is good.
+The residuals are the difference between the data and the model, which we want to see to understand if the fit is good.
 If it is, the residuals should be compatible with zero within the statistical uncertainty of the data in each bin of the RooPlot.
 
 ### Slide 12
 In the next step, I create a TCanvas to draw the RooPlots on.
 The TCanvas is divided into two drawing pads using `TCanvas::Divide()`.
 Let's plot the main RooPlot on the first pad, and adjust the dimensions of the pad to take 80 percent of the full canvas.
-Next, we are drawing the residuals on the remaining 20 percent of the canvas, where we have to scale up the label and title sizes a bit to get a consistent style.
+Next, we are drawing the residuals on the remaining 20 percent of the canvas, where we have to scale up the label and title sizes to get a consistent style.
 
 ### Slide 13
 Finally, when you draw the canvas, you will see a plot that looks almost poblication-ready!
