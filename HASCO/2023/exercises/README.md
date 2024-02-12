@@ -50,8 +50,8 @@ Create a notebook that follows these steps:
 
 In this exercise, you will get familiar with RooFit, because this is the library that is usually used for the liklihood fits in physics analyses.
 
-- Download the [RooFit tutorial](notebooks/roofit-tutorial-01.ipynb) from this repository, which can also be done by cloning this repository with `git`.
-- Run the notebook while trying to broadly understand that is happening in each step.
+- Download the [RooFit tutorial](https://github.com/root-project/training/tree/master/RooFit/roofit-tutorial-01.ipynb) from this repository, which can also be done by cloning this repository with `git`.
+- Run the notebook while trying to broadly understand what is happening in each step.
 - The exercises are written at the bottom of the notebook
 
 ## 3 - Analyzing CMS Open Data with RDataFrame
