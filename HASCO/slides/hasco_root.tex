@@ -330,7 +330,7 @@
 \title[Your Short Title]{ROOT Lecture}
 \author{Jonas Rembser}
 \institute{CERN (EP-SFT)}
-\date{July 20, 2023}
+\date{July 31, 2024}
 
 \begin{document}
 
@@ -349,18 +349,16 @@
     \begin{itemize}
         \item The \myhref{https://indico.cern.ch/event/704163/contributions/2936717/attachments/1690757/2720489/StevenSchramm-IntroROOT.pdf}{lecture} and \myhref{https://indico.cern.ch/event/704163/contributions/2936719/attachments/1693833/2727086/Tutorial-ROOT.pdf}{exercises} from the HASCO 2018 by Steven Schramm
         \item The \myhref{https://indico.cern.ch/event/999261/contributions/4197218/attachments/2285603/3884654/hasco_root_2021.pdf}{lecture} and \myhref{https://indico.cern.ch/event/999261/contributions/4197219/attachments/2285604/3884655/hasco_root_tutorial_2021.pdf}{exercises} from the HASCO 2021 by Antonio Sidoti
-        \item \myhref{https://github.com/root-project/training/tree/master/SummerStudentCourse/2023}{The ROOT Summer Student Course} at CERN from 2023
+        \item \myhref{https://github.com/root-project/student-course}{The ROOT Summer Student Course} at CERN
     \end{itemize}
-    \vspace{3mm}
-    This year, we will also cover an additional {\color{red}new ROOT feature}: the \textbf{RDataFrame}.
-
-    \vspace{6mm}
+    \vspace{9mm}
 
     About me:
     \vspace{3mm}
     \begin{itemize}
     \item I did a PhD working with the CMS collaboration, graduated in 2020
     \item Right after, I joined the ROOT team at CERN to work on support and development of the \textbf{RooFit} package
+    \item In 2024, I also took responsability for \textbf{PyROOT} (Python interface for ROOT)
     \end{itemize}
 \end{frame}
 
@@ -440,7 +438,7 @@ I encourage you to install ROOT yourself, just follow the \myhref{https://root.c
         \item On Windows, we recommend the \textbf{Windows subsystem for Linux} (\myhref{https://docs.microsoft.com/en-us/windows/wsl/about}{WSL})
     \end{itemize}
     \vspace{3mm}
-    If you find any bugs please help us by opening a \myhref{https://github.com/root-project/root/issues}{GitHub issue}!
+    If you find any bugs, please help us by opening a \myhref{https://github.com/root-project/root/issues}{GitHub issue}!
 \end{frame}
 
 \section{The different ways to use ROOT}
@@ -581,7 +579,7 @@ import ROOT
 
 \end{frame}
 
-\begin{frame}[fragile]{My First Histogram}
+\begin{frame}[fragile]{My first Histogram}
 
     \vspace{4mm}
 
@@ -591,11 +589,11 @@ root [1] h.FillRandom("gaus")
 root [2] h.Draw()
     \end{myterminal}
 
-    \myfigure{0.6}{figure-001.pdf}
+    \myfigure{0.5}{figure-001.pdf}
 
 \end{frame}
 
-\begin{frame}[fragile]{My First Histogram (in a notebook)}
+\begin{frame}[fragile]{My first Histogram (in a notebook)}
 
     \textit{Note}| that in \textit{Jupyter notebooks} (also in \textit{SWAN}), the figure is not shown directly. You have to:
     \vspace{5mm}
@@ -872,7 +870,48 @@ hs.Draw();
 
 \end{frame}
 
-\section{PyROOT: The ROOT Python Bindings}
+\begin{frame}[fragile]{Example: efficiency curves}
+
+    \begin{columns}
+        \begin{column}{0.57\textwidth}
+    Another common workflow is to draw efficiency curves with \myhref{https://root.cern.ch/doc/master/classTEfficiency.html}{TEfficiency}, which also gives uncertainties.
+%\vspace{3mm}
+
+            \begin{myterminaltiny}
+h_pass = ROOT.TH1D("h_pass", "My histogram", 50, 0, 100.0)
+h_total = ROOT.TH1D("h_total", "My histogram", 50, 0, 100.0)
+
+f_gaus = ROOT.TF1("f_gaus", "gaus", 0, 100.0)
+
+f_gaus.SetParameters(1.0, 56.0, 20.0)
+h_pass.FillRandom("f_gaus", 40000)
+h_pass.SetLineColor(ROOT.kRed)
+f_gaus.SetParameters(1.0, 50.0, 20.0)
+h_total.FillRandom("f_gaus", 100000)
+
+teff = ROOT.TEfficiency(h_pass,h_total)
+
+c7 = ROOT.TCanvas("rf101_basics", "rf101_basics", 800, 400)
+c7.Divide(2)
+c7.cd(1)
+h_total.Draw()
+h_pass.Draw("SAME")
+c7.cd(2)
+teff.Draw()
+c7.Draw()
+            \end{myterminaltiny}
+
+        \end{column}
+        \begin{column}{0.43\textwidth}
+            \vspace{-7mm}
+            \myfigure{1.0}{tefficiency_1.pdf}
+            \vspace{-7mm}
+            \myfigure{1.0}{tefficiency_2.pdf}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\section{Interpreters: C++ and Python}
 
 \begin{frame}{PyROOT}
     \begin{itemize}
@@ -987,6 +1026,46 @@ Now you can define performant C++ functions for example to:
     \item transform event data (more on this later)
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}[fragile]{C++ interpreter plugin: Clad for Automatic Differentiation}
+    With the \myhref{https://github.com/vgvassilev/clad/}{Clad} plugin, the ROOT interpreter can create derivatives of function with \textbf{Automatic differentiation (AD)} (\myhref{https://indico.cern.ch/event/1388327/contributions/5891648/attachments/2835755/4955568/Clad-Roofit-Workshop.pdf}{detailed presentation}).
+\vspace{3mm}
+
+
+    \begin{columns}
+        \begin{column}{0.57\textwidth}
+            \begin{myterminaltiny}
+ROOT.gInterpreter.Declare("""
+#include "clad/Differentiator/Differentiator.h"
+
+double myfunc(double x) {
+  return x*x;
+}
+
+// Generate the derivative
+auto myfunc_dx_clad = clad::differentiate(myfunc, "x");
+
+// Wrapper for derivative generated by Clad
+double myfunc_dx(double x) {
+  return myfunc_dx_clad.execute(x);
+}
+
+""")
+
+gr = ROOT.TGraph()
+gr_dx = ROOT.TGraph()
+for i, x in enumerate(np.linspace(-2, 2, 200)):
+    gr.SetPoint(i, x, ROOT.myfunc(x))
+    gr_dx.SetPoint(i, x, ROOT.myfunc_dx(x))
+            \end{myterminaltiny}
+
+        \end{column}
+        \begin{column}{0.43\textwidth}
+            \myfigure{1.0}{clad.pdf}
+            \textit{A parabola and the automatically-generated derivative.}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -1334,7 +1413,7 @@ Analyzers prefer Python:
         \item they want interoperability with \textbf{NumPy} and \textbf{Pandas}
     \end{itemize}
 \vspace{0.5cm}
-We deliver now:
+ROOT provides:
 
     \begin{itemize}
         \item \textbf{Pythonizations} of functions and classes, e.g., take builtin Python objects as arguments
@@ -1489,17 +1568,14 @@ root [0] TBrowser tb
     \begin{myterminal}
 > rootls file.root
     \end{myterminal}
-    \item \textbf{TFile::ls()}: prints content
+    \item \textbf{TFile::ls()} (or just \textbf{.ls}): prints content
     \begin{myterminaltiny}
 > root file.root
-root [0]
-Attaching file /mnt/file.root as _file0...
-(TFile *) 0x562cbf485d50
-root [1] _file0->ls()
+root [0] .ls
 TFile**		/mnt/file.root
  TFile*		/mnt/file.root
   KEY: TH1D	myHist;1	myTitle
-root [2] .q
+root [1] .q
     \end{myterminaltiny}
     \begin{itemize}
         \item great for interactive usage
@@ -1509,7 +1585,7 @@ root [2] .q
     \begin{column}{0.57\textwidth}
     \myfigure{1.1}{tbrowser.png}
     \begin{center}
-        {\small The new TBrowser in ROOT 6.26.}
+        {\small The ROOT TBrowser.}
     \end{center}
     \end{column}
 \end{columns}

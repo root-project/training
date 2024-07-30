@@ -1,6 +1,6 @@
-# HASCO 2022 - ROOT Tutorial
+# HASCO - ROOT Tutorial
 
-These are the exercises for the ROOT tutorial for the [HASCO 2022](https://indico.cern.ch/event/1122790/timetable/) summer school.
+These are the exercises for the ROOT tutorial for the HASCO summer school.
 
 ## 0 - Setup
 
@@ -17,7 +17,7 @@ We will use the Jupyter notebook to run all the exercises. To get into the right
 
 All of the exercises will be written in Python with PyROOT. If you are stuck, don't look at the solution immediately! First, try to get help from:
 1. The lecture slides
-2. The internet (Google usually gives you the right linkgs to the ROOT documentation and ROOT forum)
+2. The internet (Google usually gives you the right links to the ROOT documentation and ROOT forum)
 3. Your colleagues
 
 ## 1 - Histograms, graphs, and functions
@@ -46,36 +46,13 @@ Create a notebook that follows these steps:
 - Change the line color of the second function.
 - Draw the second function in the same canvas as the first one.
 
-## 2 - Fitting
+## 2 - Fitting with RooFit
 
-### 2.1 - First fit
+In this exercise, you will get familiar with RooFit, because this is the library that is usually used for the liklihood fits in physics analyses.
 
-Create a notebook that follows these steps:
-- Create an empty histogram with 50 bins with range -10 to 10
-- Fill the histogram with 10000 Gaussian random numbers
-- Create a Gaussian function for fitting, with the right range and parameter starting values
-- Use [TH1::Fit()](https://root.cern/doc/master/classTH1.html#a7e7d34c91d5ebab4fc9bba3ca47dabdd) to fit the Gaussian to the histogram with the following options:
-    - Likelihood fit
-    - Save and return the fit result as a [TFitResult](https://root.cern.ch/doc/master/classTFitResult.html)
-- Get and print the following information from the fit result
-    - Post-fit parameter values
-    - Parameter uncertainties
-    - Parameter correlation matrix
-    - It is also helpful to look at the documentation of the [FitResult](https://root.cern.ch/doc/master/classROOT_1_1Fit_1_1FitResult.html) base class of the TFitResult to figure out how to do this
-
-### 2.2 - Fit with correlated parameters
-
-- Create an empty histogram with 64 bins with range 0 to 16
-- Fill the histogram with 10000 values sampled from an exponential distribution proportional to $exp(-x)$
-- Fit the following function to the histogram:
-  ```python
-  expo = ROOT.TF1("expo", "[A] * exp(-([B] + x))")
-  expo.SetParameter(0, 1) # set initial parameters
-  expo.SetParameter(1, 1)
-  ```
-- Do a chi-square fit of this function to the histogram
-- Inspect the fit result just like in the previous exercise
-- It seems that there is a problem. While the fit parameters look ok, the correlation matrix shows something fishy. Can you say what is going wrong and why?
+- Download the [RooFit tutorial](https://github.com/root-project/training/tree/master/RooFit/roofit-tutorial-01.ipynb) from this repository, which can also be done by cloning this repository with `git`.
+- Run the notebook while trying to broadly understand what is happening in each step.
+- The exercises are written at the bottom of the notebook
 
 ## 3 - Analyzing CMS Open Data with RDataFrame
 
